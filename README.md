@@ -68,8 +68,8 @@ pytest -v
 Пример конфигурационного файла:
 
 ```shell
-repository_path,output_file,target_file
-"C:\Users\lolut\Desktop\вуз\конфиг\hm1","codeMer.txt","final_dz1\main.py"
+tool_path,repository_path,output_file,target_file,target_hash
+,"C:\Users\lolut\Desktop\вуз\конфиг\hm1","codeMer.txt","final_dz1\main.py",""
 ```
 Где:
 
@@ -78,6 +78,8 @@ target_file - Путь к программе в файле
 repository_path - Путь к репозиторию программы
 
 output_file — файл в котором для удобства сохранияетя сод графа
+
+target_hash - это хеш конкретного коммита в вашем Git-репозитории
 
 Результат покрытия тестами
 
