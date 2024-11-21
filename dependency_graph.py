@@ -28,5 +28,5 @@ def build_dependency_graph(repository_path, commits):
         else:
             print(f"Пустая или некорректная строка: {line}")  # Логируем ошибку для отладки
 
-    print(f"Граф зависимостей: {graph}")  # Для отладки
+    #print(f"Граф зависимостей: {graph}")  # Для отладки
     return graph

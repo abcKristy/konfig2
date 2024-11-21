@@ -10,7 +10,7 @@ def get_commits_with_file(repo_path, file_path):
         text=True,
     )
     commits = process.stdout.splitlines()
-    print(f"Список коммитов, изменивших {file_path}: {commits}")  # Для отладки
+    #print(f"Список коммитов, изменивших {file_path}: {commits}")  # Для отладки
     return commits
 
 def get_changed_files(repo_path, commit_hash):
@@ -23,7 +23,7 @@ def get_changed_files(repo_path, commit_hash):
         text=True,
     )
     changed_files = process.stdout.splitlines()
-    print(f"Измененные файлы в коммите {commit_hash}: {changed_files}")  # Для отладки
+    #print(f"Измененные файлы в коммите {commit_hash}: {changed_files}")  # Для отладки
     return changed_files
 
 def get_commit_history(repo_path):
