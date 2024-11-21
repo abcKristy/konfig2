@@ -18,14 +18,17 @@ def build_dependency_graph(repository_path, commits, target_hash=None):
         print("Git не найден. Убедитесь, что git установлен и доступен в системе.")
         return {}
 
-
     for line in commit_history:
-        try:
-            commit, parents = line.split()
+        parts = line.split()
+        if len(parts) == 2:  # Проверка на наличие двух элементов
+            commit, parents = parts
             if commit in commits:
                 for parent in parents.split():
                     graph[parent].add(commit)
-        except ValueError as e:
-            print(f"Ошибка при разборе строки: {line}, ошибка: {e}")
+        """elif len(parts) == 1:  # Обработка случая с одним элементом (root commit)
+            print(f"Коммит {parts[0]} не имеет родителей.")  # Информация для отладки
+        else:
+            print(f"Некорректная строка в истории коммитов: {line}")
+"""
     return graph
 
