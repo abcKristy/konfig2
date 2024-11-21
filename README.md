@@ -76,7 +76,9 @@ repository_path,output_file,target_file
 Где:
 
 target_file - Путь к программе в файле
+
 repository_path - Путь к репозиторию программы
+
 output_file — файл в котором для удобства сохранияетя сод графа
 
 Результат покрытия тестами
