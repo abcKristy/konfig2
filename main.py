@@ -6,6 +6,7 @@ import mermaid_generator
 
 
 def visualize_dependencies(config_data):
+
     """Визуализирует граф зависимостей."""
     repo_path = config_data["repository_path"]
     target_file = config_data["target_file"]
