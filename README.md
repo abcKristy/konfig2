@@ -69,7 +69,7 @@ pytest -v
 
 ```shell
 tool_path,repository_path,output_file,target_file,target_hash
-,"C:\Users\lolut\Desktop\вуз\конфиг\hm1","codeMer.txt","final_dz1\main.py",""
+,"C:\Users\lolut\Desktop\вуз\конфиг\hm1","codeMer.txt","final_dz1\main.py","e40e60dd5f9fa3e6921bc42dbf8c7c1d04c96afa"
 ```
 Где:
 
