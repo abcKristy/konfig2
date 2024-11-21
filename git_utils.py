@@ -2,6 +2,7 @@
 import subprocess
 
 def get_commits_with_file(repo_path, file_path, commit_hash=None):
+
     """Возвращает список хешей коммитов, которые изменили указанный файл."""
     command = ["git", "-C", repo_path, "log", "--pretty=format:%H", "--follow", file_path]
     if commit_hash:
