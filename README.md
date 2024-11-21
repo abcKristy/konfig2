@@ -26,50 +26,58 @@
 Консольное приложение, позволяющее визуализировать транзитивные зависимости пакетов Maven в виде графа.
 
 # 1. Клонирование репозитория
-Склонируйте репозиторий с исходным кодом и тестами:
 
+Клонируйте репозиторий с исходным кодом и тестами:
+
+```bash
 git clone <URL репозитория>
 cd <директория проекта>
+```
 
 # 2. Виртуальное окружение
 
+```shell
 python -m venv venv
-venv\Scripts\activate
+venv/Scripts/activate
+```
 
 # 3. Установка зависимостей
 
-установка pip -r requirements.txt
+```shell
+pip install -r requirements.txt
+```
+
 
 # 4. Запуск программы
 
+```shell
 py main.py
+```
 
 # 5. Тестирование
 
 Для запуска тестирования необходимо запустить следующий скрипт:
-
+```shell
 pytest -v
-Для генерации отчета о покрытии тестами необходимо выполнить команду:
+```
 
-запуск покрытия --ветвление -m pytest test_builder.py
 Просмотр результатов покрытия:
 
 # отчет о покрытии
+
 Конфигурационный файл
+
 Пример конфигурационного файла:
 
-<config>
- <PlantUml>PlantUml/plantuml-1.2024.7.jar</PlantUml>
- <code>PlantUml/graph.txt</code>
- <groupId>org.springframework</groupId>
- <artifactId>spring-webmvc</artifactId>
- <версия>6.1.6</версия>
-</конфигурация>
+```shell
+repository_path,output_file,target_file
+"C:\Users\lolut\Desktop\вуз\конфиг\hm1","codeMer.txt","final_dz1\main.py"
+```
 Где:
 
-PlantUml - Путь к программе отрисовки графа
-code - Путь к файлу-результату в виде кода
-groupId, artifactId, версия — характеристики пакета с сайта Maven
+target_file - Путь к программе в файле
+repository_path - Путь к репозиторию программы
+output_file — файл в котором для удобства сохранияетя сод графа
 
 Результат покрытия тестами
 
